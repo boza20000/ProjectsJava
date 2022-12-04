@@ -31,7 +31,7 @@ public class masSudoko {
                 }
 
             }
-            System.out.println();
+        
         }
 
 
