@@ -1,0 +1,39 @@
+package Sudoko_Game;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class masSudoko {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int index;
+        int number;
+        List<Integer> indexes = new ArrayList<>();
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (i < 34) {
+                    index = random.nextInt(81);
+                    number = random.nextInt(9) + 1;
+                    while (indexes.contains(index)) {
+                        index = random.nextInt(81);
+                    }
+                    System.out.print(number);
+                    indexes.add(index);
+
+                } else if (i > 34) {
+                    index = random.nextInt(81);
+                    while (indexes.contains(index)) {
+                        index = random.nextInt(81);
+                    }
+                    System.out.print(" ");
+                    indexes.add(index);
+                }
+
+            }
+            System.out.println();
+        }
+
+
+    }
+}
